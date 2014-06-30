@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WhatsPwd</string>
+    <string name="title_activity_main">WhatsPwd</string>
+    <string name="app_help_sorry">Sorry We could not find your whats app password yet.</string>
+    <string name="app_help">Please make sure You have Xposed Framework installed.\nEnable WhatsPassword module and activate module by rebooting.\nYour whatsapp password is checked when you start whatsapp next time. It will be displayed if changed.
+    </string>
+    <string name="app_help_version">Tested on WhatsApp version \n2.11.141 - 2.11.264
+    </string>
+    <string name="Share">Share</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="root_pwd">root_pwd</string>
+    <string name="share">Share</string>
+    <string name="refresh">Refresh</string>
+
+</resources>

@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    mavenLocal()
+}
+
+android {
+    compileSdkVersion 'rovo89:Xposed Bridge API:19'
+    buildToolsVersion '20.0.0'
+    defaultConfig {
+        applicationId 'net.maxters.droid.xpsd.whatsapp.pwd'
+        minSdkVersion 15
+        targetSdkVersion 20
+        versionCode 29
+        versionName '2.11.271'
+    }
+    signingConfigs {
+        maxCodeSign {
+            storeFile file(MAX_K_FILE)
+            storePassword MAX_K_PWD
+            keyAlias MAX_K_ALIAS
+            keyPassword MAX_A_PWD
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.maxCodeSign
+        }
+        release {
+            signingConfig signingConfigs.maxCodeSign
+            runProguard false
+            proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
+        }
+    }
+    productFlavors {
+    }
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'eu.chainfire:libsuperuser:0.1.0'
+    compile 'net.maxters.droid:xapp:+'
+}

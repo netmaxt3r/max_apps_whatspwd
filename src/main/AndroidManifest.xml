@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.maxters.droid.xpsd.whatsapp.pwd">
+
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="2.0*" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Whats app" />
+
+        <activity
+            android:name="net.maxters.droid.xpsd.whatsapp.pwd.Main"
+            android:label="@string/title_activity_main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="net.maxters.droid.xpsd.whatsapp.pwd.PasswdRcvr"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="net.maxters.droid.SHOW_PWD" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
